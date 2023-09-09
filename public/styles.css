@@ -1,0 +1,62 @@
+/* Estilo para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b5e7ee;
+  }
+  
+  /* Estilo para el encabezado h1 */
+  h1 {
+    color: #333;
+  }
+  
+  /* Estilo para los botones */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para los formularios */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para las listas */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Estilo para los elementos de lista */
+  li {
+    margin: 5px 0;
+  }
+  
+  /* Estilo para el enlace de descarga */
+  a.download-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  /* Resto de estilos CSS ... */
+
+/* Estilo para centrar h1 */
+h1 {
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Estilo para centrar h2 */
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+  

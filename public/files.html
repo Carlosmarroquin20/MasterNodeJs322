@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Archivos Subidos</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <h1>Archivos Subidos</h1>
+  <ul>
+    <!-- Usamos código JavaScript para generar la lista de archivos -->
+  <script>
+    fetch('/contacts') // Hacer una solicitud al servidor para obtener la lista de archivos
+      .then(response => response.json())
+      .then(contacts => {
+        const ul = document.querySelector('ul');
+        contacts.forEach(contact => {
+          const li = document.createElement('li');
+          li.textContent = contact.dpiFileName; // Mostrar el nombre del archivo DPI
+          ul.appendChild(li);
+        });
+      });
+  </script>
+  </ul>
+
+  <h2>Descargar Archivo</h2>
+    <form action="/download" method="GET">
+        <label for="archivo">Selecciona un archivo:</label>
+        <select name="archivo" id="archivo" required>
+            <!-- Aquí vamos a listar los archivos disponibles para descargar -->
+            <script>
+              fetch('/contacts') // Hacer una solicitud al servidor para obtener la lista de archivos
+                .then(response => response.json())
+                .then(contacts => {
+                  const select = document.querySelector('#archivo');
+                  contacts.forEach(contact => {
+                    const option = document.createElement('option');
+                    option.value = contact.dpiFileName; // Nombre del archivo como valor
+                    option.textContent = contact.dpiFileName; // Mostrar el nombre del archivo
+                    select.appendChild(option);
+                  });
+                });
+            </script>
+          </select>
+          
+  <button type="submit">Descargar</button>
+</form>
+
+</body>
+</html>
